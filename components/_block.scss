@@ -1,0 +1,27 @@
+.block {
+    border: 1px solid black;
+
+    &_dashed{
+        border-style: dashed;
+    }
+    &__1 {
+        grid-area: block1;
+        background-color: $blue-1;
+    }
+    &__2 {
+        grid-area: block2;
+        background-color: $blue-2;
+    }
+    &__3 {
+        grid-area: block3;
+        background-color: $blue-3;
+    }
+    &__4 {
+        grid-area: block4;
+        @include flex(flex, center, center);
+    }
+    &__5 {
+        grid-area: block5;
+        @include flex(flex, center, center);
+    }
+}

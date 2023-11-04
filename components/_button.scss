@@ -1,0 +1,26 @@
+.button {
+    min-width: 150px;
+    height: 40px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 200ms ease-out;
+
+    &:active {
+        transform: translateY(1px);
+        transition: transform 200ms linear;
+    }
+    &:hover {
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.40);
+    }
+    &:focus {
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.40);
+    }
+
+    &_yellow {
+        background-color: $yellow;
+    }
+    &_green {
+        background-color: $green;
+    }
+}

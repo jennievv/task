@@ -1,0 +1,12 @@
+$black: black;
+$blue-2: aquamarine;
+$blue-3: deepskyblue;
+$red: red;
+
+@mixin size($w, $h){
+    width: $w;
+    height: $h;
+}
+
+@import '../reset';
+@import './form';

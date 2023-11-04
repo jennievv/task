@@ -1,0 +1,133 @@
+.form {
+    max-width: 300px;
+    width: 100%;
+    min-width: 220px;
+    padding: 9px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+
+    &__title{
+        margin-bottom: 7px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+
+        @media (max-width: 568px){
+            margin-bottom: 5px;
+            font-size: 17px;
+        }
+    }
+    &__column{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 20px;
+        
+        @media (max-width: 568px){
+            gap: 10px;
+        }
+    }
+    &__label {
+    }
+    &__name {
+        font-size: 16px;
+        margin-bottom: 6px;
+        
+        @media (max-width: 568px){
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+    }
+    &__text-area{
+        max-width: 210px;
+        max-height: 45px;
+        padding: 5px;
+        box-sizing: border-box;
+
+        &:active {
+            border: 1px solid $blue-3;
+        }
+        &:focus {
+            border: 1px solid $blue-3;
+        }
+    }
+    &__list {
+        min-width: 30px;
+        cursor: pointer;
+        
+        &:active {
+            border: 1px solid $blue-3;
+        }
+        &:focus {
+            border: 1px solid $blue-3;
+        }
+        &:valid {
+            border-color: $black;
+        }
+        &:invalid:not(:focus) {
+            border-color: $red;
+        }
+    }
+    &__input {
+        border: 1px solid $black;        
+        padding: 5px;
+        box-sizing: border-box;
+
+        &::placeholder {
+            padding: 5px;
+        }
+        &:active {
+            border-color: $blue-3;
+        }
+        &:focus {
+            border-color: $blue-3;
+        }
+        &:valid {
+            border-color: $black;
+        }
+        &:invalid:not(:focus) {
+            border-color: $red;
+        }
+    }
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__button {
+        max-width: 100px;
+        @include size(100%, 30px);
+        border-radius: 8px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background-color 200ms ease-out;
+
+        @media (max-width: 568px){
+            max-width: 90px;
+            @include size(100%, 25px);
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+    
+        &:active {
+            transform: translateY(1px);
+            transition: transform 200ms linear;
+        }
+        &:hover {
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.40);
+        }
+        &:focus {
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.40);
+        }
+    
+        &_submit {
+            background-color: $blue-2;
+        }
+        &_reset {
+            background-color: $blue-3;
+        }
+    }
+}

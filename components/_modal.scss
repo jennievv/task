@@ -1,0 +1,40 @@
+.modal{
+    position: fixed;
+    @include size(100%, 100%);
+    background: rgba(196, 196, 196, 0.539);
+
+    &__window {
+        max-width: 250px;
+        @include size(30%, 90px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include flex(flex, center, center);
+        background-color: $white;
+        padding: 30px 40px 33px;
+        border-radius: 8px;
+        
+        @media (max-width: 568px){
+            width: 15%;
+        }
+    }
+    &__text {
+        font-size: 24px;
+        
+        @media (max-width: 568px){
+            font-size: 19px;
+        }
+    }
+    &__close {
+        position: absolute;
+        top: 15px;
+        right: 18px;
+        @include size(20px, 20px);
+        cursor: pointer;
+    }
+    &__svg{
+        position: absolute;
+        @include size(20px, 20px);
+    }
+}

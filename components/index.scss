@@ -1,0 +1,24 @@
+$black: black;
+$white: white;
+$blue-1: aqua;
+$blue-2: aquamarine;
+$blue-3: deepskyblue;
+$yellow: yellow;
+$green: green;
+
+@mixin size($w, $h){
+    width: $w;
+    height: $h;
+}
+@mixin flex($d, $jc, $ai){
+    display: $d;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@import './reset';
+@import './modal';
+@import './grid';
+@import './header';
+@import './block';
+@import './button';

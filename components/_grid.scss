@@ -1,0 +1,23 @@
+.grid{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+    "header header header"
+    "block1 block2 block3"
+    "block4 block5 block5";
+    gap: 20px;
+
+    @media (max-width: 568px){
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-areas:
+        "header"
+        "block1"
+        "block2"
+        "block3"
+        "block4"
+        "block5";
+    }
+}
